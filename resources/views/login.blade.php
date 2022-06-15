@@ -15,20 +15,15 @@
         <div class="col-lg-3">
           <div class="card mt-5">
               <div class="card-header">
-                <strong class="text-center d-block">Form <span class="text-primary">Register</span></strong>
+                <strong class="text-center d-block">Form <span class="text-primary">Login</span></strong>
               </div>
               <div class="card-body">
-                <form action="/simpanuser" method="POST">
+                <form action="/ceklogin" method="POST">
                   @csrf
-                  <div class="form-group">
-                    <label for="">Nama Pengguna</label>
-                    <input type="text"
-                      class="form-control" autofocus required name="nama">
-                  </div>
                   <div class="form-group">
                     <label for="">Email</label>
                     <input type="email"
-                      class="form-control" name="email" required>
+                      class="form-control" name="email" required autofocus>
                   </div>
                   <div class="form-group">
                     <label for="">Password</label>
@@ -36,9 +31,9 @@
                       class="form-control" name="password"  >
                   </div>
                   <div class="form-group">
-                    <input name="" id="" class="btn btn-primary" type="submit" value="Sign Up">
+                    <input name="" id="" class="btn btn-primary" type="submit" value="Sign In">
                   </div>
-                  <small>Sudah punya akun?<a href="/"> login</a> sekarang</small>
+                  <small>Belum punya akun?<a href="/register"> daftar</a> sekarang</small>
                 </form>
               </div>
           </div>

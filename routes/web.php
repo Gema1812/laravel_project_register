@@ -20,6 +20,10 @@ use App\Http\Controllers\ProvisionServer;
 // });
 
 // Route::get('/', 'AuthController@register');
-Route::get('/', [AuthController::class, 'register']);
+Route::get('/register', [AuthController::class, 'register']);
 
 Route::post('/simpanuser', [AuthController::class, 'simpanuser']);
+
+Route::get('/', [AuthController::class, 'login']);
+
+Route::post('/ceklogin', [AuthController::class, 'ceklogin']);
